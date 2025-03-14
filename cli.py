@@ -28,7 +28,7 @@ def manage_orders():
         print("2. View All Orders")
         print("3. Find Order by ID")
         print("4. Delete Order")
-        print("5. Add Menu Item to Order")  # Fixed option name
+        print("5. Add Menu Item to Order")
         print("6. Back to Main Menu")
         choice = input("Select an option: ")
 
@@ -41,7 +41,7 @@ def manage_orders():
         elif choice == "4":
             delete_order()
         elif choice == "5":
-            add_menu_item_to_order()  # Correct function call
+            add_menu_item_to_order()
         elif choice == "6":
             break
         else:
@@ -70,7 +70,7 @@ def manage_menu_items():
         else:
             print("Invalid option. Please try again.")
 
-# --- Order Functions ---
+#Order Functions
 def create_order():
     name = input("Enter customer name: ")
     date = input("Enter order date (YYYY-MM-DD): ")
@@ -98,7 +98,7 @@ def delete_order():
     print("Order deleted successfully.")
 
 def add_menu_item_to_order():
-    ipdb.set_trace()  # Debugging
+    #ipdb.set_trace()  # Debugging
     order_id = int(input("Enter Order ID: "))
     item_id = int(input("Enter Menu Item ID: "))
     quantity = int(input("Enter quantity: "))
@@ -112,7 +112,7 @@ def add_menu_item_to_order():
     else:
         print("Invalid Order ID or Menu Item ID.")
 
-# --- Menu Item Functions ---
+#Menu Item Functions
 def create_menu_item():
     name = input("Enter item name: ")
     price = float(input("Enter item price: "))

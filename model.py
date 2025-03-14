@@ -53,11 +53,14 @@ class Order:
 
     def save(self):
         """Inserts a new order into the database"""
-        self.db.cursor.execute(
+        cursor = self.db.cursor
+        cursor.execute(
             "INSERT INTO orders (customer_name, order_date, total_amount) VALUES (?, ?, ?)",
             (self.customer_name, self.order_date, self.total_amount)
         )
         self.db.conn.commit()
+        self.order_id = cursor.lastrowid
+
 
     @classmethod
     def get_all(cls, db):
@@ -83,11 +86,13 @@ class MenuItem:
         self.db = db
         self.item_name = item_name
         self.price = price
+        self.item_id = None
 
     def save(self):
         cursor = self.db.cursor
         cursor.execute("INSERT INTO menu_items (item_name, price) VALUES (?, ?)", (self.item_name, self.price))
         self.db.conn.commit()
+        self.item_id = cursor.lastrowid
 
     @classmethod
     def get_all(cls, db):
