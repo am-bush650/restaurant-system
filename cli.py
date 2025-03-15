@@ -16,7 +16,7 @@ def main():
         elif choice == "2":
             manage_menu_items()
         elif choice == "3":
-            db.close()  # Close DB connection before exiting
+            db.close()
             break
         else:
             print("Invalid option. Please try again.")
@@ -98,7 +98,7 @@ def delete_order():
     print("Order deleted successfully.")
 
 def add_menu_item_to_order():
-    #ipdb.set_trace()  # Debugging
+
     order_id = int(input("Enter Order ID: "))
     item_id = int(input("Enter Menu Item ID: "))
     quantity = int(input("Enter quantity: "))
@@ -112,7 +112,6 @@ def add_menu_item_to_order():
     else:
         print("Invalid Order ID or Menu Item ID.")
 
-#Menu Item Functions
 def create_menu_item():
     name = input("Enter item name: ")
     price = float(input("Enter item price: "))

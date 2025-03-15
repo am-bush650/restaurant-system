@@ -1,5 +1,4 @@
 import sqlite3
-import ipdb
 
 class Database:
     """Handles database connection and initialization"""

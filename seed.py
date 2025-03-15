@@ -38,6 +38,5 @@ for order in orders:
         print(f"Linking Order {order.order_id} with MenuItem {item.item_id}, Quantity: {quantity}")
         OrderMenuItem.add_menu_item_to_order(db, order_id=order.order_id, item_id=item.item_id, quantity=quantity)
 
-print("Database Seeded Successfully!")
 
 db.close()
