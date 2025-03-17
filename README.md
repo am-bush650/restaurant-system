@@ -99,3 +99,4 @@ Uses Faker for fake customer names and order dates.
 #################################################################
 
 CLI COMMANDS - python cli.py
+source phase3project/bin/activate
