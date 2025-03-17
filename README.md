@@ -92,3 +92,10 @@ Uses Faker for fake customer names and order dates.
 📌 Faker (Generates Fake Data)
 
 📌 IPDB (Debugging)
+
+
+
+
+#################################################################
+
+CLI COMMANDS - python cli.py
